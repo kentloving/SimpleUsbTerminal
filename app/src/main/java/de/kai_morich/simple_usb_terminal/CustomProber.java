@@ -15,6 +15,7 @@ class CustomProber {
     static UsbSerialProber getCustomProber() {
         ProbeTable customTable = new ProbeTable();
         customTable.addProduct(0x16d0, 0x087e, CdcAcmSerialDriver.class); // e.g. Digispark CDC
+        customTable.addProduct(0x239A, 0x8015, CdcAcmSerialDriver.class); // adafruit feather
         return new UsbSerialProber(customTable);
     }
 
